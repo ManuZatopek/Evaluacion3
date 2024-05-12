@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Evaluacion 3</title>
+    <link rel="stylesheet" href="/static/css/estilosEjercicios.css" >
+</head>
+<body>
+<div class="container">
+    <h1>Ejercicio 2</h1>
+    <img src="/static/img/personas.png" width="250px" height="80px">
+    <br> <br>
+    <form method="POST">
+        <div class="form-group">
+            <label for="nom1"> Nombre 1:</label>
+            <input type="text" name="nom1">
+        </div>
+        <div class="form-group">
+            <label for="nom2"> Nombre 2:</label>
+            <input type="text" name="nom2">
+        </div>
+        <div class="form-group">
+            <label for="nom3"> Nombre 3:</label>
+            <input type="text" name="nom3">
+        </div>
+    <br>
+        <div class="form-group">
+            <input type="submit" value="Enviar Datos">
+        </div>
+    </form>
+
+   {% if cantidad %}
+    <div>
+        <p class="negrita">El nombre con mayor cantidad de caracteres es: <span>{{mayor}}</span>, el cual contiene:<span>{{cantidad}}</span> caracteres</p>
+    </div>
+    {% endif %}
+    <br>
+    <a href="http://127.0.0.1:5000/" class="button">Volver al Home</a>
+</div>
+</body>
+</html>
